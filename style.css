@@ -1,0 +1,636 @@
+/* html{
+    scroll-behavior: smooth;
+} */
+
+body{
+    font-family: "Lato", sans-serif;
+
+    padding:0;
+    margin:0;
+    
+    
+}
+nav{
+    background-color: #080808;
+    color: white;
+    padding: 20px 60px;
+    
+}
+
+.navTop{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    
+}
+
+.search{
+    color:white;
+    align-items: center;
+    background: rgb(238,174,202);
+    background: linear-gradient(93deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display: flex;
+    padding: 10px 35px;
+    border-radius: 10px;
+    
+    
+}
+
+.searchinput{
+    border: none;
+    font-family:  monospace;
+    font-size:large;
+   
+    background-color:transparent;
+    
+}
+
+.searchinput::placeholder{
+    font-size: 15px;
+    color: rgb(41, 26, 47) ;
+    font-family:   'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size:18px;
+}
+
+.limitedoffer{
+    font-size: 20px;
+    border-bottom: 2px solid rgb(128, 0, 17);
+    cursor: pointer;
+}
+.navBottom{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+.menuitem{
+    margin-right: 50px;
+    cursor: pointer;
+    color:
+    rgb(239, 244, 246);
+    font-weight: 400;
+}
+
+.slider{
+    /* background: url("https://plus.unsplash.com/premium_photo-1704574327769-d3593ee4b720?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+    /* background: url("https://media.tenor.com/2UNJufMI1OEAAAAM/packing-city.gif"); */
+     background: url("https://media1.tenor.com/m/AELd3oFr-DMAAAAd/that-one-there-was-a-violation-that1there-was-violation.gif");
+    /* background: repeat  */
+    /* background: url("https://www.nike.com/in/w/giannis-antetokounmpo-shoes-2wfnqzy7ok"); */
+    overflow :hidden;
+    /* stops the extra sides from left right and botttom up */
+    
+
+}
+.sliderwrapper{
+    display: flex;
+    width: 500vw;
+    transition:all 0.5s ease-in-out;
+    /* transition is the one causing sliding movements */
+}
+
+.sliderItem{
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sliderbg{
+    border-radius: 58%;
+    width: 750px;
+    height:750px;
+    position: absolute;
+    /* background-color:rgb(72, 80, 80) */
+    background: rgb(131,58,180);
+ /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+    background: rgb(206,226,224);
+    /* background: linear-gradient(245deg, rgba(206,226,224,1) 0%, rgba(12,12,11,1) 100%); */
+}
+.sliderimg{
+    z-index:1 ;
+}
+.slidertitle{
+    position: absolute;
+    top:10%;
+    right:10%;
+    font-size:60px;
+    font-weight: 900;
+    color: wheat;
+    z-index: 1;
+}
+.sliderprice{
+    position: absolute;
+    bottom:35%;
+    right:22%;
+    font-size:60px;
+    font-weight: 380;
+    border:1px solid rgb(18, 18, 18);
+    color: black;
+    z-index:1 ;
+}
+
+.buyButton{
+    position: absolute;
+    bottom:32%;
+    right:21%;
+    font-size:30px;
+    font-weight: 580;
+    border:1px solid rgb(209, 200, 200);
+    color: rgb(15, 14, 15);
+    border: 5px solid ;
+    border-radius: 14%;
+    background-color: rgb(199, 204, 159); 
+    background: #d4d4de;
+    background: linear-gradient(to right, #9f7592 0%, #ecefe0 100%);
+/* -webkit-background-clip: text; */
+    cursor: pointer;
+    z-index: 1;
+/* -webkit-text-fill-color: transparent; */
+
+}
+.buyButton:hover{
+    background-color: rgb(102, 136, 120);
+    color:rgb(78, 51, 129);
+}
+
+.sliderItem:nth-child(1) .sliderBg{
+    background: linear-gradient(245deg, rgba(206,226,224,1) 0%, rgba(12,12,11,1) 100%);
+}
+.sliderItem:nth-child(2) .sliderBg{
+    background-color: #992345;
+}
+.sliderItem:nth-child(3) .sliderBg{
+    /* background-color: #9f7592; */
+    background: rgb(228,235,235);
+background: linear-gradient(320deg, rgba(228,235,235,1) 0%, rgba(163,105,145,1) 71%);
+}
+.sliderItem:nth-child() .sliderBg{
+    background-color: #9f7592;
+}
+.sliderItem:nth-child(5) .sliderBg{
+    background-color: #0c1c63ac;
+}
+
+.sliderItem:nth-child(1) .sliderprice{
+    color: rgba(12,12,11,1) ;
+}
+.sliderItem:nth-child(2) .sliderprice{
+    color: #992345;
+}
+.sliderItem:nth-child(3) .sliderprice{
+    /* background-color: #9f7592; */
+    
+    color: rgba(163,105,145,1) ;
+}
+.sliderItem:nth-child(4) .sliderprice{
+    color: #75959f;
+}
+.sliderItem:nth-child(5) .sliderprice{
+    color: #0c1c63ac;
+}
+
+.features{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:50px;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items :center;
+    text-align: center;
+    /* border: 3px solid rgb(18, 18, 18);
+    border-radius: 6%; */
+}
+.featureIcon{
+    width: 50px;
+    height: 50px;
+    
+}
+.featureTitle{
+   font-size: 25px;
+   font-weight: 600;
+   margin: 20px; 
+   
+}
+.featureDesc{
+    color:#992345;
+    /* padding: 5px 10px; */
+    width: 50%;
+    height: 100px;
+    font-size: 22px;
+  
+    
+}
+
+.product{
+    height:100vh;
+    background-color: whitesmoke ;
+    position: relative;
+    
+}
+
+.payment{
+    width:500px;
+    height:600px;
+    background-color:#d4d4de;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    /* flex  makes it horizontal and by putting flex direction column */
+}
+
+/* .payment {
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    padding: 10px 50px;
+    /* display: none; */
+    /* flex-direction: column; */
+  /* } */
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid rgb(37, 36, 36);
+    
+  }
+  
+  .payInput::placeholder {
+    color: rgb(120, 152, 164);
+  }
+  
+  .cardIcons{
+    display:flex;
+  }
+  .cardIcon{
+    margin-right: 10px;
+    
+  }
+
+.cardInfo{
+    display:flex;
+    justify-content:space-between ;
+    /* flex: 1; */
+
+}
+.sm{
+    width: 30%;
+}
+
+.payButton{
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    left:0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #a4899a;
+    font-size: medium;
+    color: white;
+    /* border:none; */
+    cursor:pointer;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+.productImg{
+    width: 40%;
+}
+
+.productDetails{
+    position: absolute;
+    top: 10%;
+    padding:50px;
+    right:0 ;
+    width: 40%;
+}
+
+.productTitle{
+    font-size: 75px;
+    font-weight: 900;
+}
+.productDesc{
+    font-style: 24px;
+    color: #75959f;
+}
+.colors,.sizes{
+    display:flex;
+}
+
+.color{
+    width: 44px;
+    height: 34px;
+    border-radius:5px;
+    background-color: black;
+    margin: 10px;
+    cursor: pointer ;
+    margin-left: 0%;
+    
+}
+
+.color:last-child{
+   background-color:darkblue;
+}
+.size{
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    
+
+
+}
+.productbutton{
+    position: relative;
+    top:30;
+    padding: 300px;
+    right: -20px;
+    padding: 10px 20px;
+    background-color: #cec6c6;
+    color: #080808;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.productbutton:hover{
+    background-color: #3e1212;
+    color: #a06969;
+}
+
+/* Define background images in CSS */
+/* .bg-url-0 {
+    background: url("https://plus.unsplash.com/premium_photo-1704574327769-d3593ee4b720?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.bg-url-1 {
+    background: url("https://media.tenor.com/2UNJufMI1OEAAAAM/packing-city.gif");
+}
+
+.bg-url-2 {
+    background: url('url3.jpg');
+}
+
+.bg-url-3 {
+    background: url('url4.jpg');
+} */
+
+.gallery{
+    padding: 50px;
+    display:flex;
+}
+
+.galleryItem{
+    flex: 1;
+    padding: 50px;
+}
+
+.galleryImg{
+    width: 100%;
+}
+
+.newSeason{
+    display: flex;
+}
+
+.nsItem{
+    flex: 1;
+    padding: 0px 5px;
+    background-color: #030303;
+    color: #8e762b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.nsImg{
+    width:100%;
+    height:600px;
+}
+
+.nsImg {
+    width: 100%;
+    height: 800px;
+  }
+  
+  .nsTitle {
+    font-size: 40px;
+  }
+  
+  .nsButton {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    top:40px;
+  }
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: rgb(13, 13, 13);
+    cursor: pointer;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    padding: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+  }
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+  }
+  
+  .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width:480px) {
+    nav{
+        background-color: rgb(66, 4, 4);
+        padding: 20px;
+
+    }
+    .search{
+    display: none;
+    }
+    .menuitem{
+        margin: 50px;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    .slider{
+       clip-path: none; 
+    
+        background: url("https://plus.unsplash.com/premium_photo-1704574327769-d3593ee4b720?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        /* background: url("https://media.tenor.com/2UNJufMI1OEAAAAM/packing-city.gif"); */
+         /* background: url("https://media1.tenor.com/m/AELd3oFr-DMAAAAd/that-one-there-was-a-violation-that1there-was-violation.gif"); */
+        /* background: repeat  */
+        /* background: url("https://www.nike.com/in/w/giannis-antetokounmpo-shoes-2wfnqzy7ok"); */
+        overflow :hidden;
+        /* stops the extra sides from left right and botttom up */
+        
+    
+    }
+    .navBottom{
+        flex-wrap: wrap;
+    }
+    .sliderimg{
+        width: 100%;
+    }
+    .sliderBg{
+       width: 100%; 
+       height:100%;
+    }
+
+    .sliderTitle{
+        display: none;
+    }
+    .sliderprice{
+        top: unset;
+        bottom: -45px;
+        left: 0;
+        width: 150px;
+        background-color: #c0b4bf;
+    }
+
+    .buyButton{
+        
+        top: 0px;
+        right: 0px;;
+        border-radius: 0%;
+        bottom: unset;  
+  }
+
+.features{
+    flex-direction: column;
+}
+.product{
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+
+.productDetails{
+    width:100%;
+    padding:0; 
+    display :flex;
+    flex-direction:column;
+    align-items: center;
+   text-align: center;
+   position: relative;
+   top:0;
+   /* margin-bottom: 5000px; */
+   
+}
+
+.productImg{
+    width: 80%;
+}
+.productDetails{
+    width:100%;
+    padding:0;
+    
+    margin-bottom: 20px; /* Adjust the value as needed */
+    
+}
+
+.gallery{
+    display: none;
+}
+.newSeason{
+    height:20px;
+    flex-direction: column;
+}
+.nsItem:nth-child(2){
+    padding: 50px;
+  }
+.nsItem:nth-child(1){
+    height: 300px;
+      
+    margin-top: 500px; /* Adjust the value as needed */
+    
+  }
+
+
+
+}
